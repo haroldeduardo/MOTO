@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 27, 2018 9:14:38 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="m10r.model.Venta" table="Venta" catalog="moto10racingHBT" optimistic-lock="version">
+        <id name="idVenta" type="java.lang.Integer">
+            <column name="idVenta" />
+            <generator class="identity" />
+        </id>
+        <property name="idEmpleado" type="int">
+            <column name="idEmpleado" not-null="true" />
+        </property>
+        <property name="idPersona" type="int">
+            <column name="idPersona" not-null="true" />
+        </property>
+        <property name="idTipoTransaccion" type="int">
+            <column name="idTipoTransaccion" not-null="true" />
+        </property>
+        <property name="totalVenta" type="float">
+            <column name="totalVenta" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="totalDescuentoVenta" type="float">
+            <column name="totalDescuentoVenta" precision="12" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
